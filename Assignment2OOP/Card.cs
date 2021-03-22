@@ -8,9 +8,11 @@ namespace Assignment2OOP
 {
     class Card
     {
+        // Fields 
         public List<string> Suit { get; private set; }
         public List<string> Value { get; private set; }
 
+        // Constructor
         public Card()
         {
             Suit = new List<string> { "Spades", "Clubs", "Hearts", "Diamonds" };

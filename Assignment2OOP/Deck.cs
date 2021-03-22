@@ -8,32 +8,22 @@ namespace Assignment2OOP
 {
     class Deck
     {
-        // use stack as it relates to how deck of cards works
+        // Fields
         public List<string> cards { get; private set; } = new List<string>();
 
+        // Constructor 
         public Deck()
         {
             FillDeck();
         }
 
+        // Fill up the deck when a new object is instansiated
         private void FillDeck()
         {
             Card setOfCards = new Card();
             foreach(string card in setOfCards.GetSetOfCards())
             {
                 cards.Add(card);
-            }
-        }
-
-        public bool isEmpty()
-        {
-            if(cards.Count == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
             }
         }
 
@@ -61,12 +51,12 @@ namespace Assignment2OOP
         public string Deal()
         {
             // Mark sure the deck isnt empty
-            if(cards.Count > 0)
+            if(topCardIndex > 0)
             {
                 // Get card at top and return it and decrease topCardIndex
-                var topCard = cards[topCardIndex];
+                string topCard = cards[topCardIndex];
                 topCardIndex--;
-                return topCard.ToString();
+                return topCard;
             }
             else
             {
@@ -74,6 +64,7 @@ namespace Assignment2OOP
             }
         }
 
+        // Method which shows user all cards in current deck
         public void DisplayDeck()
         {
             foreach(var card in cards)
