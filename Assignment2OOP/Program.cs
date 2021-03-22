@@ -31,11 +31,11 @@ namespace Assignment2OOP
 
             while(true)
             {
-                Console.WriteLine("\nWould you like to draw a card? (type y)");
+                Console.WriteLine("Would you like to draw a card? (type y)");
                 string answer = Console.ReadLine();
                 if (answer == "yes" || answer == "Yes" || answer == "y")
                 {
-                    Console.WriteLine("> " + newDeck.Deal());
+                    Console.WriteLine("> " + newDeck.Deal() + "\n");
                 }
                 else
                 {

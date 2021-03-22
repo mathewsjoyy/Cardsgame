@@ -20,16 +20,12 @@ namespace Assignment2OOP
                                        "Ace", "Queen", "Jack", "King"};
         }
 
+        // Makes a set of unqiue cards
         public List<string> GetSetOfCards()
         {
             List<string> cardsSet = new List<string>();
-            foreach (var suit in Suit)
-            {
-                foreach (var value in Value)
-                {
-                    cardsSet.Add(value + " of " + suit);
-                }
-            }
+
+            foreach (var suit in Suit) foreach (var value in Value) cardsSet.Add(value + " of " + suit);
 
             return cardsSet;
         }

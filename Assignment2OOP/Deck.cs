@@ -12,19 +12,13 @@ namespace Assignment2OOP
         public List<string> cards { get; private set; } = new List<string>();
 
         // Constructor 
-        public Deck()
-        {
-            FillDeck();
-        }
-
+        public Deck() => FillDeck();
+        
         // Fill up the deck when a new object is instansiated
         private void FillDeck()
         {
             Card setOfCards = new Card();
-            foreach(string card in setOfCards.GetSetOfCards())
-            {
-                cards.Add(card);
-            }
+            foreach(string card in setOfCards.GetSetOfCards()) cards.Add(card);
         }
 
         public void Shuffle()
@@ -60,17 +54,14 @@ namespace Assignment2OOP
             }
             else
             {
-                return "No more cards left in deck!";
+                return "No more cards left in the deck!";
             }
         }
 
         // Method which shows user all cards in current deck
         public void DisplayDeck()
         {
-            foreach(var card in cards)
-            {
-                Console.WriteLine(card);
-            }
+            foreach(var card in cards) Console.WriteLine(card);
         }
     }
 }
