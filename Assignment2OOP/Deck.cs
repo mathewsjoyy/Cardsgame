@@ -9,10 +9,14 @@ namespace Assignment2OOP
     class Deck
     {
         // Fields
-        public List<string> cards { get; private set; } = new List<string>();
+        public List<string> cards { get; private set; }
 
         // Constructor 
-        public Deck() => FillDeck();
+        public Deck()
+        {
+            cards = new List<string>();
+            FillDeck();
+        }
         
         // Fill up the deck when a new object is instansiated
         private void FillDeck()
