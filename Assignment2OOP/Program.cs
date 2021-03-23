@@ -23,7 +23,7 @@ namespace Assignment2OOP
 
             Console.WriteLine("Would you like to shuffle your deck of cards? (type yes)");
             string option = Console.ReadLine();
-            if(option == "yes" || option == "Yes")
+            if(option.ToLower() == "yes")
             {
                 newDeck.Shuffle();
                 Console.Clear();
@@ -35,7 +35,7 @@ namespace Assignment2OOP
                                   "\n> Type 'yes' for yes\n> Type 'anything else' for no");
                 string answer = Console.ReadLine();
                 
-                if (answer == "yes" || answer == "Yes" || answer == "y")
+                if (answer.ToLower() == "yes")
                 {
                     Console.Clear();
                     Console.WriteLine($"> {newDeck.Deal()}\n");

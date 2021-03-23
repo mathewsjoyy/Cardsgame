@@ -9,20 +9,20 @@ namespace Assignment2OOP
     class Deck
     {
         // Fields
-        public List<string> cards { get; private set; }
+        public List<string> Cards { get; private set; }
 
         // Constructor 
         public Deck()
         {
-            cards = new List<string>();
-            FillDeck();
+            Cards = new List<string>();
+            CreateStandardDeck();
         }
         
         // Fill up the deck when a new object is instansiated
-        private void FillDeck()
+        private void CreateStandardDeck()
         {
             Card setOfCards = new Card();
-            foreach(string card in setOfCards.GetSetOfCards()) cards.Add(card);
+            foreach(string card in setOfCards.GetSetOfCards()) Cards.Add(card);
         }
 
         public void Shuffle()
@@ -32,15 +32,15 @@ namespace Assignment2OOP
 
             // Or use more common way to shuffle
             Random rnd = new Random();
-            int count = cards.Count;
+            int count = Cards.Count;
             
             while(count > 1)
             {
                 count--;
                 int rng = rnd.Next(count);
-                var value = cards[rng];
-                cards[rng] = cards[count];
-                cards[count] = value;
+                var value = Cards[rng];
+                Cards[rng] = Cards[count];
+                Cards[count] = value;
             }
         }
 
@@ -52,7 +52,7 @@ namespace Assignment2OOP
             if(topCardIndex > 0)
             {
                 // Get card at top and return it and decrease topCardIndex
-                string topCard = cards[topCardIndex];
+                string topCard = Cards[topCardIndex];
                 topCardIndex--;
                 return topCard;
             }
@@ -65,7 +65,7 @@ namespace Assignment2OOP
         // Method which shows user all cards in current deck
         public void DisplayDeck()
         {
-            foreach(var card in cards) Console.WriteLine(card);
+            foreach(var card in Cards) Console.WriteLine(card);
         }
     }
 }
