@@ -42,6 +42,7 @@ namespace Assignment2OOP
                 }
                 else
                 {
+                    Console.WriteLine("No more cards will be drawn..");
                     break;
                 }
             }
