@@ -22,7 +22,8 @@ namespace Assignment2OOP
         private void CreateStandardDeck()
         {
             List<string> Suits = new List<string> { "Spades", "Hearts", "Diamonds", "Clubs", };
-            List<string> Values = new List<string> { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
+            List<string> Values = new List<string> { "2", "3", "4", "5", "6", "7", "8", "9",
+                                                     "10", "Jack", "Queen", "King", "Ace" };
             foreach(string suit in Suits)
             {
                 foreach(string value in Values)
@@ -34,9 +35,6 @@ namespace Assignment2OOP
 
         public void Shuffle()
         {
-            // Use Guid to shuffle the list
-            //cards = cards.OrderBy(x => Guid.NewGuid()).ToList();
-
             // Or use more common way to shuffle
             Random rnd = new Random();
             int count = Cards.Count;
@@ -53,7 +51,7 @@ namespace Assignment2OOP
 
         // Keep an index of the top card of the deck
         private int topCardIndex = 51;
-        public Card Deal()
+        public string Deal()
         {
             // Mark sure the deck isnt empty
             if (topCardIndex > 0)
@@ -61,10 +59,9 @@ namespace Assignment2OOP
                 // Get card at top and return it and decrease topCardIndex
                 Card topCard = Cards[topCardIndex];
                 topCardIndex--;
-                return topCard;
+                return topCard.ToString();
             }
-            return Cards[0];
-            
+            return "No More Cards In The Deck";
         }
 
         // Method which shows user all cards in current deck
