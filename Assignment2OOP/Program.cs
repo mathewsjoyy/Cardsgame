@@ -23,18 +23,18 @@ namespace Assignment2OOP
 
             Console.WriteLine("Would you like to shuffle your deck of cards? (type yes)");
             string option = Console.ReadLine();
-            if(option.ToLower() == "yes")
+            if (option.ToLower() == "yes")
             {
                 newDeck.Shuffle();
                 Console.Clear();
             }
 
-            while(true)
+            while (true)
             {
                 Console.WriteLine("Would you like to draw a card?" +
                                   "\n> Type 'yes' for yes\n> Type 'anything else' for no");
                 string answer = Console.ReadLine();
-                
+
                 if (answer.ToLower() == "yes")
                 {
                     Console.Clear();

@@ -9,25 +9,18 @@ namespace Assignment2OOP
     class Card
     {
         // Fields 
-        public List<string> Suit { get; private set; }
-        public List<string> Value { get; private set; }
+        public string Suit { get; private set; }
+        public string Value { get; private set; }
 
         // Constructor
-        public Card()
+        public Card(string suit, string value)
         {
-            Suit = new List<string> { "Spades", "Clubs", "Hearts", "Diamonds" };
-            Value = new List<string> { "2", "3", "4", "5", "6", "7", "8", "9", "10",
-                                       "Ace", "Queen", "Jack", "King"};
+            Suit = suit;
+            Value = value;
         }
 
-        // Makes a set of unqiue cards
-        public List<string> GetSetOfCards()
-        {
-            List<string> cardsSet = new List<string>();
+        // Override to string method to show values of card when printed
+        public override string ToString() => $"{Value} of {Suit}";
 
-            foreach (var suit in Suit) foreach (var value in Value) cardsSet.Add(value + " of " + suit);
-
-            return cardsSet;
-        }
     }
 }

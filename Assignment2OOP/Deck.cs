@@ -9,20 +9,27 @@ namespace Assignment2OOP
     class Deck
     {
         // Fields
-        public List<string> Cards { get; private set; }
+        public List<Card> Cards { get; private set; }
 
         // Constructor 
         public Deck()
         {
-            Cards = new List<string>();
+            Cards = new List<Card>();
             CreateStandardDeck();
         }
-        
+
         // Fill up the deck when a new object is instansiated
         private void CreateStandardDeck()
         {
-            Card setOfCards = new Card();
-            foreach(string card in setOfCards.GetSetOfCards()) Cards.Add(card);
+            List<string> Suits = new List<string> { "Spades", "Hearts", "Diamonds", "Clubs", };
+            List<string> Values = new List<string> { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
+            foreach(string suit in Suits)
+            {
+                foreach(string value in Values)
+                {
+                    Cards.Add(new Card(suit, value));
+                }
+            };
         }
 
         public void Shuffle()
@@ -33,8 +40,8 @@ namespace Assignment2OOP
             // Or use more common way to shuffle
             Random rnd = new Random();
             int count = Cards.Count;
-            
-            while(count > 1)
+
+            while (count > 1)
             {
                 count--;
                 int rng = rnd.Next(count);
@@ -46,26 +53,24 @@ namespace Assignment2OOP
 
         // Keep an index of the top card of the deck
         private int topCardIndex = 51;
-        public string Deal()
+        public Card Deal()
         {
             // Mark sure the deck isnt empty
-            if(topCardIndex > 0)
+            if (topCardIndex > 0)
             {
                 // Get card at top and return it and decrease topCardIndex
-                string topCard = Cards[topCardIndex];
+                Card topCard = Cards[topCardIndex];
                 topCardIndex--;
                 return topCard;
             }
-            else
-            {
-                return "No more cards left in the deck!";
-            }
+            return Cards[0];
+            
         }
 
         // Method which shows user all cards in current deck
         public void DisplayDeck()
         {
-            foreach(var card in Cards) Console.WriteLine(card);
+            foreach (var card in Cards) Console.WriteLine(card);
         }
     }
 }
