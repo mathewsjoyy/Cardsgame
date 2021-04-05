@@ -31,3 +31,6 @@ b. Where should it be better?
 a. Does it need more work?/Is it great?
 b. Where could it be better?
 3) What suggestions do you have to improve the code?
+
+# Useful links
+[GitHub code review help](https://github.com/features/code-review/)
