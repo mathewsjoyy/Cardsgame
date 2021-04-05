@@ -30,7 +30,7 @@ namespace Assignment2OOP
                 {
                     Cards.Add(new Card(suit, value));
                 }
-            };
+            }
         }
 
         public void Shuffle()
