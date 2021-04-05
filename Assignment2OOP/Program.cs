@@ -11,21 +11,20 @@ namespace Assignment2OOP
         static void Main(string[] args)
         {
             // Call method to start the program
-            DrawCards();
+            Deck newDeck = new Deck();
+            DrawCards(newDeck);
 
             Console.ReadKey();
         }
 
         // Short program which deals one card from deck at a time and also shuffles the deck
-        private static void DrawCards()
+        private static void DrawCards(Deck Deck)
         {
-            Deck newDeck = new Deck();
-
             Console.WriteLine("Would you like to shuffle your deck of cards? (type yes)");
             string option = Console.ReadLine();
             if (option.ToLower() == "yes")
             {
-                newDeck.Shuffle();
+                Deck.Shuffle();
                 Console.Clear();
             }
 
@@ -38,7 +37,7 @@ namespace Assignment2OOP
                 if (answer.ToLower() == "yes")
                 {
                     Console.Clear();
-                    Console.WriteLine($"> {newDeck.Deal()}\n");
+                    Console.WriteLine($"> {Deck.Deal()}\n");
                 }
                 else
                 {
