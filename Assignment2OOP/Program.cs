@@ -31,10 +31,15 @@ namespace Assignment2OOP
             while (true)
             {
                 Console.WriteLine("Would you like to draw a card?" +
-                                  "\n> Type 'yes' for yes\n> Type 'anything else' for no");
+                                  "\n> Press ENTER for yes\n> Type 'anything else' for no");
                 string answer = Console.ReadLine();
 
-                if (answer.ToLower() == "yes")
+                if (Deck.IsEmpty() == true)
+                {
+                    Console.WriteLine("No more cards left in your deck!");
+                    break;
+                }
+                else if (answer.ToLower() == "")
                 {
                     Console.Clear();
                     Console.WriteLine($"> {Deck.Deal()}\n");

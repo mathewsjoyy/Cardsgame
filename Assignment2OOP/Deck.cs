@@ -64,6 +64,14 @@ namespace Assignment2OOP
             return "No More Cards In The Deck";
         }
 
+        public bool IsEmpty()
+        {
+            if (topCardIndex < 1)
+                return true;
+            else
+                return false;
+        }
+
         // Method which shows user all cards in current deck
         public void DisplayDeck()
         {
