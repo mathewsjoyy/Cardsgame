@@ -2,6 +2,12 @@
 Card game made in pure C#
 
 # What is the aim?
+![](images/Screenshot%202021-04-05%20154026.png)
+
+
+
+
+# What does this project help learn?
 This assignment looks at part of the process in implementing a problem – a code
 review.
 A code review is a review of your code by another developer or developers. Code
