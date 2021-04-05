@@ -32,5 +32,11 @@ a. Does it need more work?/Is it great?
 b. Where could it be better?
 3) What suggestions do you have to improve the code?
 
+# Knowledge and skills assessed
+1. Subject Specific Knowledge, Skills and Understanding ,Code review process,C# programming.
+2. Professional Graduate Skills, Code review and assessment skills.
+3. Emotional Intelligence, Awareness of others, managing and supporting others, motivation, selfconfidence.
+4. Career-focused Skills, Code review.
+
 # Useful links
 [GitHub code review help](https://github.com/features/code-review/)
