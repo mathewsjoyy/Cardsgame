@@ -34,7 +34,7 @@ namespace Assignment2OOP
                                   "\n> Press ENTER for yes\n> Type 'anything else' for no");
                 string answer = Console.ReadLine();
 
-                if (Deck.IsEmpty() == true)
+                if (Deck.IsEmpty())
                 {
                     Console.WriteLine("No more cards left in your deck!");
                     break;
