@@ -39,6 +39,7 @@ namespace Assignment2OOP
                     Console.WriteLine("Please enter a valid option!");
                 }
             }
+
             Console.Clear();
             
             while (true)
