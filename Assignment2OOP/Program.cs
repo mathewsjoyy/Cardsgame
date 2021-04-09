@@ -50,8 +50,7 @@ namespace Assignment2OOP
 
                 if (Deck.IsEmpty())
                 {
-                    Console.WriteLine("No more cards left in your deck!");
-                    break;
+                    Console.WriteLine("No more cards left in your deck!"); break;
                 }
                 else if (answer.ToLower() == "")
                 {
@@ -60,8 +59,7 @@ namespace Assignment2OOP
                 }
                 else
                 {
-                    Console.WriteLine("No more cards will be drawn..");
-                    break;
+                    Console.WriteLine("No more cards will be drawn.."); break;
                 }
             }
         }
