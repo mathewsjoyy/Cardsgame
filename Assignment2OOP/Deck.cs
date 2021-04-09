@@ -50,16 +50,13 @@ namespace Assignment2OOP
             }
         }
 
-        // Keep an index of the top card of the deck
-        private int topCardIndex = 51;
         public string Deal()
         {
             // Mark sure the deck isnt empty
-            if (topCardIndex >= 0)
+            if (Cards.Count >= 0)
             {
                 // Get card at top and return it and decrease topCardIndex
-                Card topCard = Cards[topCardIndex];
-                topCardIndex--;
+                Card topCard = Cards[Cards.Count - 1];
                 Cards.Remove(topCard);
                 return topCard.ToString();
             }
@@ -68,7 +65,7 @@ namespace Assignment2OOP
 
         public bool IsEmpty()
         {
-            if (topCardIndex == -1)
+            if (Cards.Count < 1)
                 return true;
             else
                 return false;
