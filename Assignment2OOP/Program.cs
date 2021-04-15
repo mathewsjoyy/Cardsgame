@@ -18,19 +18,19 @@ namespace Assignment2OOP
         }
 
         // Short prgrram which deals one card from deck at a time and also shfles the deck
-        private static void DrawCards(Deck Deck)
+        private static void DrawCards(Deck deck)
         {
             Console.WriteLine("Would you like to shuffle your deck of cards? (type yes or no)");
 
             while (true)
             {
                 string option = Console.ReadLine();
-                if (option.ToLower() == "yes")
+                if (option.ToLower().Trim() == "yes")
                 {
-                    Deck.Shuffle();
+                    deck.Shuffle();
                     Console.WriteLine("Deck has been randomly shuffled."); break;
                 }
-                else if (option.ToLower() == "no")
+                else if (option.ToLower().Trim() == "no")
                 {
                     Console.WriteLine("Your deck is not shuffled."); break;
                 }
@@ -41,21 +41,21 @@ namespace Assignment2OOP
             }
 
             Console.Clear();
-            
+
             while (true)
             {
                 Console.WriteLine("Would you like to draw a card?" +
                                   "\n> Press ENTER for yes\n> Type 'anything else' for no");
                 string answer = Console.ReadLine();
 
-                if (Deck.IsEmpty())
+                if (deck.IsEmpty())
                 {
                     Console.WriteLine("No more cards left in your deck!"); break;
                 }
-                else if (answer.ToLower() == "")
+                else if (answer.ToLower().Trim() == "")
                 {
                     Console.Clear();
-                    Console.WriteLine($"> {Deck.Deal()}\n");
+                    Console.WriteLine($"> {deck.Deal()}\n");
                 }
                 else
                 {

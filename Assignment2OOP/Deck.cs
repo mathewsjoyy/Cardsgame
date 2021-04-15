@@ -21,12 +21,12 @@ namespace Assignment2OOP
         // Fill up the deck when a new object is instansiated
         private void CreateStandardDeck()
         {
-            List<string> Suits = new List<string> { "Spades", "Hearts", "Diamonds", "Clubs", };
-            List<string> Values = new List<string> { "2", "3", "4", "5", "6", "7", "8", "9",
+            List<string> suits = new List<string> { "Spades", "Hearts", "Diamonds", "Clubs", };
+            List<string> values = new List<string> { "2", "3", "4", "5", "6", "7", "8", "9",
                                                      "10", "Jack", "Queen", "King", "Ace" };
-            foreach(string suit in Suits)
+            foreach(string suit in suits)
             {
-                foreach(string value in Values)
+                foreach(string value in values)
                 {
                     Cards.Add(new Card(suit, value));
                 }
@@ -53,7 +53,7 @@ namespace Assignment2OOP
         public string Deal()
         {
             // Mark sure the deck isnt empty
-            if (Cards.Count >= 0)
+            if (Cards.Count > 0)
             {
                 // Get card at top and return it and decrease topCardIndex
                 Card topCard = Cards[Cards.Count - 1];
