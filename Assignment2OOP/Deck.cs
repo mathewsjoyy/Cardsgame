@@ -36,7 +36,6 @@ namespace Assignment2OOP
 
         public void Shuffle()
         {
-            // Or use more common way to shuffle
             Random rnd = new Random();
             int count = Cards.Count;
 
@@ -69,12 +68,6 @@ namespace Assignment2OOP
                 return true;
             else
                 return false;
-        }
-
-        // Method which shows user all cards in current deck
-        public void DisplayDeck()
-        {
-            foreach (var card in Cards) Console.WriteLine(card);
         }
     }
 }
