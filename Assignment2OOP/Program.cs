@@ -10,14 +10,14 @@ namespace Assignment2OOP
     {
         static void Main(string[] args)
         {
-            // Call methd to start the program
+            // Call method to start the program
             Deck newDeck = new Deck();
             DrawCards(newDeck);
 
             Console.ReadKey();
         }
 
-        // Short prgrram which deals one card from deck at a time and also shfles the deck
+        // Short program which deals one card from deck at a time and also shuffles the deck
         private static void DrawCards(Deck deck)
         {
             Console.WriteLine("Would you like to shuffle your deck of cards? (type yes or no)");
