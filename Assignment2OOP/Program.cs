@@ -14,7 +14,6 @@ namespace Assignment2OOP
             Deck newDeck = new Deck();
             DrawCards(newDeck);
 
-            Console.ReadKey();
         }
 
         // Short program which deals one card from deck at a time and also shuffles the deck
@@ -22,6 +21,7 @@ namespace Assignment2OOP
         {
             Console.WriteLine("Would you like to shuffle your deck of cards? (type yes or no)");
 
+            // Asks user if they want to shuffle the deck
             while (true)
             {
                 string option = Console.ReadLine();
@@ -42,10 +42,11 @@ namespace Assignment2OOP
 
             Console.Clear();
 
+            // Keeps asking if users wants to draw a card,until deck is empty or user says no
             while (true)
             {
                 Console.WriteLine("Would you like to draw a card?" +
-                                  "\n> Press ENTER for yes\n> Type 'anything else' for no");
+                                  "\n> Press ENTER for yes\n> Type 'no' to stop drawing cards");
                 string answer = Console.ReadLine();
 
                 if (deck.IsEmpty())
@@ -57,9 +58,13 @@ namespace Assignment2OOP
                     Console.Clear();
                     Console.WriteLine($"> {deck.Deal()}\n");
                 }
+                else if (answer.ToLower().Trim() == "no")
+                {
+                    break;
+                }
                 else
                 {
-                    Console.WriteLine("No more cards will be drawn.."); break;
+                    Console.WriteLine("Sorry I don't know what you want to do.."); break;
                 }
             }
         }
